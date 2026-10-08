@@ -1,0 +1,1 @@
+#Condicional if, permite ejecutar un bloque de código solo si se cumple una condición específica.
