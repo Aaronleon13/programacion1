@@ -46,3 +46,63 @@ elif nota >= 70:  #Si la nota es mayor o igual a 70,
     print("Bien")  #Se imprime el mensaje si la condición es verdadera
 else:  #Si ninguna de las condiciones anteriores se cumple, se ejecuta el bloque de código del else
     print("Necesitas mejorar")  #Se imprime el mensaje si todas las condiciones son falsas    
+
+
+#Operadores lógicos, permiten combinar múltiples
+#condiciones en una sola expresión.
+
+
+#Ejemplo de AND, ambas condiciones deben ser verdaderas
+#para que la expresión sea verdadera.
+
+asistencia = float(input("Ingrese su porcentaje de asistencia: \n"))  #Se solicita al usuario que ingrese su porcentaje de asistencia y se convierte a flotante
+calificacion = float(input("Ingrese su calificación: \n"))  #Se solicita al usuario que ingrese su calificación y se convierte a flotante
+
+if asistencia >= 75 and calificacion >= 70:  #Si la asistencia es mayor o igual a 75 y la calificación es mayor o igual a 70, se ejecuta el bloque de código
+    print("Aprobado")  #Se imprime el mensaje si ambas condiciones son verdaderas
+else:  #Si alguna de las condiciones no se cumple, se ejecuta el bloque de código del else
+    print("Reprobado")  #Se imprime el mensaje si alguna de las condiciones es falsa
+
+
+#Ejemplo de OR, al menos una de las condiciones debe ser verdadera
+
+color_vestimenta = input("Ingrese el color de su vestimenta: \n")  #Se solicita al usuario que ingrese el color de su vestimenta
+
+if color_vestimenta == "rojo" or color_vestimenta == "azul" or color_vestimenta == "amarillo":  #Si el color de vestimenta es rojo o azul o verde, se ejecuta el bloque de código
+    print("Tu vestimenta es de un color permitido")  #Se imprime el mensaje si alguna de las condiciones es verdadera
+else:  #Si ninguna de las condiciones se cumple, se ejecuta el bloque de código
+    print("Tu vestimenta no es de un color permitido")  #Se imprime el mensaje si ambas condiciones son falsas
+
+
+#Ejemplo de NOT, invierte el valor de la condición
+edad = int(input("Ingrese su edad: \n"))  #Se solicita al usuario que ingrese su edad y se convierte a entero
+
+if not edad < 18:  #Si la edad no es menor que 18, se ejecuta el bloque de código
+    print("Eres mayor de edad")  #Se imprime el mensaje si la condición es verdadera
+else:  #Si la condición es falsa, se ejecuta el bloque de código del else
+    print("Eres menor de edad")  #Se imprime el mensaje si la condición es falsa
+
+
+#Ejemplo de combinación de operadores lógicos,
+#se pueden combinar múltiples condiciones
+#usando paréntesis para agruparlas y controlar el orden de evaluación.
+
+invitacion = input("¿Tienes invitación? (si/no): \n")  #Se solicita al usuario que ingrese si tiene invitación
+edad = int(input("Ingrese su edad: \n"))  #Se solicita al usuario que ingrese su edad y se convierte a entero
+reserva = input("¿Tienes reserva? (si/no): \n")  #Se solicita al usuario que ingrese si tiene reserva
+
+if (invitacion == "si" or reserva == "si") and edad >= 18:  #Si tiene invitación o reserva y es mayor o igual a 18, se ejecuta el bloque de código
+    print("Puedes entrar al evento")  #Se imprime el mensaje si la condición es verdadera
+else:  #Si la condición es falsa, se ejecuta el bloque de código del else
+    print("No puedes entrar al evento")  #Se imprime el mensaje si la condición es falsa
+
+
+invitacion_antro = input("¿Tienes invitación para el antro? (si/no): \n")  #Se solicita al usuario que ingrese si tiene invitación para el antro
+credencial = input("¿Tienes credencial de lector? (si/no): \n")  #Se solicita al usuario que ingrese si tiene credencial de estudiante
+suspendido = input("¿Estás suspendido? (si/no): \n")  #Se solicita al usuario que ingrese si está suspendido
+respuesta = suspendido == "si"  #Se evalúa si la respuesta es "si" y se guarda en la variable respuesta
+
+if (invitacion_antro == "si" or credencial == "si") and not respuesta:  #Si tiene invitación o credencial y no está suspendido, se ejecuta el bloque de código
+    print("Puedes entrar al antro")  #Se imprime el mensaje si la condición es verdadera
+else:  #Si la condición es falsa, se ejecuta el bloque de código del else
+    print("No puedes entrar al antro")  #Se imprime el mensaje si la condición es falsa
