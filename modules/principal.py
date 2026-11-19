@@ -3,7 +3,7 @@ import conversiones
 
 def main():
     metros = int(input("Ingrese la cantidad de metros: "))
-    resultado = conversiones.metros_a_centimentros(metros)
+    resultado = conversiones.metros_a_centimetros(metros)
     print(f"{metros} metros son {resultado} centimetros")
 
     horas = int(input("Ingrese la cantidad de horas: "))
